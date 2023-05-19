@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style type="text/css">
+      #hoge1{
+        display: none;
+      }
+      #target1 {
+        background-color: aqua;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+
+      <p id="target1">target</p>
+    </div>
+    <p id="hoge1">テスト１</p>
+
+    <script>
+      const target1 = document.getElementById('target1');
+      target1.addEventListener(
+        'mouseover',
+        () => {
+          document.getElementById('hoge1').style.display = 'block';
+
+          function test() {
+            var change = document.getElementById('hoge1');
+
+            if (change.style.display == 'block') {
+              change.style.display = 'none';
+            } else {
+              change.style.display = 'block';
+            }
+          }
+        },
+        false
+      );
+      target1.addEventListener(
+        'mouseleave',
+        () => {
+          document.getElementById('hoge1').style.display = 'none';
+
+          function test() {
+            var change = document.getElementById('hoge1');
+
+            if (change.style.display == 'block') {
+              change.style.display = 'none';
+            } else {
+              change.style.display = 'block';
+            }
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
